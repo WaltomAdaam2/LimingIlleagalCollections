@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>黎明违禁物品陈列</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #111 url("Data/Background.png") center top / cover fixed no-repeat;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: rgba(0, 0, 0, 0.48);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 48px;
+    }
+
+    .site-header,
+    .notice,
+    .kit-card {
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.54);
+      backdrop-filter: blur(6px);
+    }
+
+    .site-header {
+      padding: 24px;
+    }
+
+    .site-header h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      line-height: 1.1;
+    }
+
+    .site-header p {
+      margin: 0;
+      color: #e6e6e6;
+      font-size: 1.15rem;
+    }
+
+    .notice {
+      margin: 20px 0;
+      padding: 18px;
+      color: #f2f2f2;
+      line-height: 1.8;
+    }
+
+    .notice p {
+      margin: 0;
+    }
+
+    .kit-section {
+      margin-top: 28px;
+    }
+
+    .kit-section h2 {
+      margin: 0 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 3px solid #6495ed;
+      font-size: 1.8rem;
+    }
+
+    .kit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(341px, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+
+    .kit-card {
+      min-width: 0;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .kit-card h3 {
+      min-height: 2.6em;
+      margin: 0 0 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.05rem;
+      line-height: 1.3;
+      overflow-wrap: anywhere;
+    }
+
+    .kit-card img {
+      display: block;
+      width: 100%;
+      max-width: 364px;
+      height: auto;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+
+    .footer {
+      margin-top: 34px;
+      padding-top: 18px;
+      border-top: 3px solid #6495ed;
+    }
+
+    .back-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 96px;
+      height: 44px;
+      border: 2px solid #98f5ff;
+      border-radius: 6px;
+      background: #6495ed;
+      color: #000;
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        width: min(100% - 20px, 1180px);
+      }
+
+      .site-header {
+        padding: 18px;
+      }
+
+      .kit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .back-top {
+        right: 12px;
+        bottom: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="top" class="page">
+    <header class="site-header">
+      <h1>黎明违禁物品陈列</h1>
+      <p>此处仅陈列违禁物品</p>
+    </header>
+
+    <aside class="notice" aria-label="陈列说明">
+      <p>以下内容仅作陈列，全部禁售。严禁在游戏内直接打开或使用。</p>
+    </aside>
+
+    <section id="contraband" class="kit-section">
+      <h2>违禁物品</h2>
+      <div class="kit-grid">
+        <article class="kit-card">
+          <h3>堆叠图腾 Kit</h3>
+          <img src="Data/Kits/contraband/001.png" width="358" height="169" alt="堆叠图腾 Kit">
+        </article>
+        <article class="kit-card">
+          <h3>村民蛋</h3>
+          <img src="Data/Kits/contraband/002.png" width="360" height="169" alt="村民蛋">
+        </article>
+        <article class="kit-card">
+          <h3>Xin服违禁物品合集</h3>
+          <img src="Data/Kits/contraband/003.png" width="359" height="168" alt="Xin服违禁物品合集">
+        </article>
+        <article class="kit-card">
+          <h3>32K床（附魔）</h3>
+          <img src="Data/Kits/contraband/004.png" width="359" height="169" alt="32K床（附魔）">
+        </article>
+        <article class="kit-card">
+          <h3>基岩 Kit</h3>
+          <img src="Data/Kits/contraband/005.png" width="363" height="173" alt="基岩 Kit">
+        </article>
+        <article class="kit-card">
+          <h3>OP药水（带效果）</h3>
+          <img src="Data/Kits/contraband/006.png" width="364" height="168" alt="OP药水（带效果）">
+        </article>
+        <article class="kit-card">
+          <h3>建筑师之镐</h3>
+          <img src="Data/Kits/contraband/007.png" width="359" height="168" alt="建筑师之镐">
+        </article>
+        <article class="kit-card">
+          <h3>堆叠32K收藏品</h3>
+          <img src="Data/Kits/contraband/008.png" width="360" height="167" alt="堆叠32K收藏品">
+        </article>
+        <article class="kit-card">
+          <h3>违禁品 Kit</h3>
+          <img src="Data/Kits/contraband/009.png" width="361" height="165" alt="违禁品 Kit">
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>本站由 GitHub Pages 驱动。</p>
+      <p><a href="https://home.mcocet.top">2026 @黎明物资 MCOCET 提供技术支持</a></p>
+    </footer>
+  </div>
+
+  <a class="back-top" href="#top">返回顶部</a>
+</body>
+</html>
